@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basket - Sign In</title>
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss-cdn@3.4.10/tailwindcss.js"></script>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+  <div class="w-full max-w-md">
+    <div class="bg-white shadow-xl rounded-3xl overflow-hidden border border-gray-100">
+      <div class="px-6 py-8 bg-gradient-to-r from-fuchsia-600 to-fuchsia-700 text-white">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-white font-bold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          </div>
+          <div>
+            <p class="text-sm text-fuchsia-100">Welcome back</p>
+            <h1 class="text-2xl font-bold leading-tight">Sign in to Basket</h1>
+          </div>
+        </div>
+        <p class="text-sm text-fuchsia-100">Keep your lists synced across devices.</p>
+      </div>
+      <div class="px-6 py-8 space-y-6">
+        <form id="auth-form" class="space-y-5">
+          <div class="space-y-2">
+            <label for="email" class="block text-sm font-semibold text-gray-700">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500 outline-none bg-gray-50" autocomplete="email">
+          </div>
+          <div class="space-y-2">
+            <label for="password" class="block text-sm font-semibold text-gray-700">Password</label>
+            <input id="password" type="password" required placeholder="••••••••" class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500 outline-none bg-gray-50" autocomplete="current-password">
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <label class="flex items-center gap-2 text-gray-600">
+              <input type="checkbox" class="rounded border-gray-300 text-fuchsia-600 focus:ring-fuchsia-500">
+              Remember me
+            </label>
+            <a href="#" class="text-fuchsia-600 font-semibold hover:text-fuchsia-700">Forgot password?</a>
+          </div>
+          <button id="auth-submit" type="submit" class="w-full bg-fuchsia-600 text-white py-3 rounded-xl font-bold shadow-lg shadow-fuchsia-900/20 hover:bg-fuchsia-700 transition-colors">Sign In</button>
+        </form>
+        <div class="text-center text-sm text-gray-600">
+          <span>Don't have an account?</span>
+          <a href="index.html" class="text-fuchsia-600 font-semibold hover:text-fuchsia-700">Start free</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="scripts/helpers.js"></script>
+  <script src="scripts/ai.js"></script>
+  <script src="scripts/ui.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
