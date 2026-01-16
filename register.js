@@ -18,6 +18,7 @@ const authCreateAccountButton = document.getElementById(
 )
 const launchAppButton = document.getElementById("launch-app-button")
 const forgotPasswordButton = document.getElementById("forgot-password-button")
+let currentUser = null
 
 onAuthState((user) => {
 	if (user) {
@@ -25,6 +26,7 @@ onAuthState((user) => {
 		createAccountButton?.classList.add("hidden")
 		signOutButton?.classList.remove("hidden")
 		launchAppButton?.classList.remove("hidden")
+		currentUser = user
 	} else {
 		signInButton?.classList.remove("hidden")
 		createAccountButton?.classList.remove("hidden")
@@ -228,6 +230,17 @@ document
 	?.addEventListener("click", (e) => {
 		e.preventDefault()
 		signUpWithGoogle()
+	})
+
+document
+	.getElementById("start-shopping-button")
+	?.addEventListener("click", (e) => {
+		e.preventDefault()
+		if (currentUser) {
+			window.location.href = "app.html"
+		} else {
+			window.location.href = "signin.html"
+		}
 	})
 
 authCreateAccountButton?.addEventListener("click", async (e) => {
